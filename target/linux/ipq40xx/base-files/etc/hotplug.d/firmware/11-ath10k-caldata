@@ -58,6 +58,9 @@ case "$FIRMWARE" in
 	qcom,ap-dk01.1-c1)
 		caldata_extract "ART" 0x1000 0x2f20
 		;;
+	pctel,ap-wifi-1200)
+		caldata_extract "ART" 0x1000 0x2f20
+		;;
 	asus,map-ac2200|\
 	asus,rt-ac42u|\
 	asus,rt-ac58u)
@@ -141,6 +144,9 @@ case "$FIRMWARE" in
 "ath10k/pre-cal-ahb-a800000.wifi.bin")
 	case "$board" in
 	qcom,ap-dk01.1-c1)
+		caldata_extract "ART" 0x5000 0x2f20
+		;;
+	pctel,ap-wifi-1200)
 		caldata_extract "ART" 0x5000 0x2f20
 		;;
 	asus,map-ac2200|\
