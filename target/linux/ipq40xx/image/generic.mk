@@ -914,17 +914,17 @@ endef
 TARGET_DEVICES += qcom_ap-dk04.1-c1
 
 define Device/qcom_ap-wifi-1200
-       $(call Device/FitImage)
-       $(call Device/UbiFit)
-       DEVICE_VENDOR := PCTEL
-       DEVICE_MODEL := AP-WIFI-1200
-       SOC := qcom-ipq4019
-       DEVICE_DTS := qcom-ipq4019-ap-wifi-1200
-       KERNEL_INSTALL := 1
-       KERNEL_SIZE := 4048k
-       BLOCKSIZE := 128k
-       PAGESIZE := 2048
-       BOARD_NAME := ap-wifi-1200
+	$(call Device/FitImage)
+	$(call Device/UbiFit)
+	DEVICE_VENDOR := PCTEL
+	DEVICE_MODEL := AP-WIFI-1200
+	SOC := qcom-ipq4019
+	DEVICE_DTS := qcom-ipq4019-ap-wifi-1200
+	KERNEL_INSTALL := 1
+	KERNEL_SIZE := 4048k
+	BLOCKSIZE := 128k
+	PAGESIZE := 2048
+	BOARD_NAME := ap-wifi-1200
 endef
 TARGET_DEVICES += qcom_ap-wifi-1200
 
