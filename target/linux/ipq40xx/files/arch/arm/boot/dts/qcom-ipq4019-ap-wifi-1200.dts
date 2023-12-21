@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: GPL-2.0-or-later OR MIT
-// Henric Lindén, PCTEL Inc.
 
 #include "qcom-ipq4019.dtsi"
 #include <dt-bindings/gpio/gpio.h>
@@ -130,8 +129,6 @@
         };
     };
 
-   // Bluetooth chipset (UART1) on GPIO pin 9 and 8.
-   // TODO: add enable and reset pins.
     serial_1_pins: serial_1_pinmux {
         mux {
             pins = "gpio9", "gpio8";
@@ -186,7 +183,6 @@
     };
 
     phy-reset {
-
         line-name = "PHY-reset";
         gpios = <47 GPIO_ACTIVE_HIGH>;
         gpio-hog;
@@ -308,7 +304,6 @@
 };
 
 // Bluetooth (TI SimpleLink CC2640)
-// Not a HCI module, unfortunately.
 &blsp1_uart2 {
     pinctrl-0 = <&serial_1_pins>;
     pinctrl-names = "default";
